@@ -26,18 +26,11 @@ const Sidebar = () => {
       });
     }
   }, [session, spotifyApi]);
-console.log(playlistId);
+  console.log(playlistId);
 
   return (
-    <div className="text-gray-500 p-5 text-sm border-gray-900 overflow-y-scroll scrollbar-hide h-screen">
+    <div className="text-gray-500 p-5 text-xs lg:text-sm border-gray-900 overflow-y-scroll pb-36 scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem] hidden md:inline-flex">
       <div className="space-y-4">
-        <button
-          className="flex items-center space-x-2 hover:text-white "
-          onClick={() => signOut()}
-        >
-          <LightBulbIcon className="h-5 w-5" />
-          <p>Logout</p>
-        </button>
         <button className="flex items-center space-x-2 hover:text-white ">
           <HomeIcon className="h-5 w-5" />
           <p>Home</p>
@@ -61,7 +54,7 @@ console.log(playlistId);
         </button>
         <button className="flex items-center space-x-2 hover:text-white ">
           <RssIcon className="h-5 w-5" />
-          <p>Search</p>
+          <p>Your episodes</p>
         </button>
         <hr className="border-t-[0.10px] border-gray-900" />
         {/* Playlist */}
